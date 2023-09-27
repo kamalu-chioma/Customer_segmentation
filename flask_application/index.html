@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Cluster Predictor</title>
+
+    <style>
+        /* Internal CSS for basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        form input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        
+    
+        .inline-elements {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 20px; /* Adjust the margin as needed */
+        }
+
+        .inline-elements a {
+            margin-left: 10px; /* Add margin between the heading and the link */
+        }
+    </style>
+</head>
+<body>
+    <h1>Customer Cluster Predictor</h1>
+
+    <!-- Form to input RFM values -->
+    <form action="/" method="post">
+        <label for="recency">Recency:</label>
+        <input type="text" id="recency" name="recency" required><br><br>
+        <label for="frequency">Frequency:</label>
+        <input type="text" id="frequency" name="frequency" required><br><br>
+        <label for="monetory">Monetory:</label>
+        <input type="text" id="monetory" name="monetory" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    
+    <!-- Section to display prediction result -->
+
+    <div id="prediction_result">
+</div>
+<div>
+
+    <h2>Cluster Legend:</h2>
+    <ul>
+        <li><strong>Cluster 0:</strong> Low Recency, Low Frequency, High Monetory</li>
+        <li><strong>Cluster 1:</strong> Moderate Recency, Moderate Frequency, Moderate Monetory</li>
+        <li><strong>Cluster 2:</strong> High Recency, High Frequency, Low Monetory</li>
+    </ul>
+</div>
+
+
+    <!-- Section to show sample RFM data -->
+    <div class="inline-elements">
+        <h3>Sample RFM DATA</h3>
+    </div>
+    <div class="inline-elements">
+        <a href="link_to_your_xls_file.xls" target="_blank">View Full excel file with customer cluster data</a>
+    </div>
+    
+
+    <table border="1">
+    <thead>
+        <tr>
+            <th>Customer</th>
+            <th>Recency</th>
+            <th>Frequency</th>
+            <th>Monetory</th>
+            <th>Cluster</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>12346</td>
+            <td>1.624870008</td>
+            <td>-2.57178095</td>
+            <td>3.144114329</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>12347</td>
+            <td>-1.841635707</td>
+            <td>1.166177684</td>
+            <td>1.376048931</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>12348</td>
+            <td>0.291210184</td>
+            <td>-0.218983048</td>
+            <td>0.749773969</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>12349</td>
+            <td>-0.679354029</td>
+            <td>0.435520829</td>
+            <td>0.73317475</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>12350</td>
+            <td>1.573275033</td>
+            <td>-0.661172569</td>
+            <td>-0.59154415</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>12352</td>
+            <td>-0.256611582</td>
+            <td>0.554872163</td>
+            <td>0.993244042</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>12353</td>
+            <td>1.161475335</td>
+            <td>-1.671688536</td>
+            <td>-1.788964572</td>
+            <td>2</td>
+        </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>
