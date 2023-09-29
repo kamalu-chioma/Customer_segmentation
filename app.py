@@ -8,6 +8,7 @@ Created on Wed Sep 27 06:14:07 2023
 import pickle
 from flask import Flask, render_template, request, escape
 from jinja2 import escape
+from markupsafe import escape
 
 app = Flask(__name__, template_folder='templates')
 
