@@ -10,7 +10,7 @@ from flask import Flask, render_template, request, escape
 #from jinja2 import escape
 from markupsafe import escape
 
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__)
 
 # Load the pre-trained model
 with open('model.pkl', 'rb') as model_file:
