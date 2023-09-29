@@ -6,7 +6,7 @@ Created on Wed Sep 27 06:14:07 2023
 """
 
 import pickle
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, escape
 
 app = Flask(__name__, template_folder='templates')
 
